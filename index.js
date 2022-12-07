@@ -1,4 +1,5 @@
-calcularRentabilidade(5)
+//DESAFIO 1/////////////////////////////////////////
+//calcularRentabilidade(5)
 
 function calcularRentabilidade(a) {
     let arrayA = []
@@ -16,4 +17,21 @@ function calcularRentabilidade(a) {
     console.log(arrayA)
     console.log("multiplos duplos")
     console.log(arrayB)
+}
+
+//DESAFIO 2/////////////////////////////////////////
+let onibus = [[10, 0] , [3, 5] , [5 , 8]]
+pontoDeOnibus(onibus)
+
+function pontoDeOnibus(onibus) {
+    let qtdPassageiros = 0
+   
+    onibus.forEach(parada => {
+        qtdPassageiros = qtdPassageiros + parada[0]
+        qtdPassageiros = qtdPassageiros - parada[1]
+    });
+   
+    onibus[onibus.length] = qtdPassageiros
+
+    console.log(onibus)
 }
