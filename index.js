@@ -20,8 +20,10 @@ function calcularRentabilidade(a) {
 }
 
 //DESAFIO 2/////////////////////////////////////////
+//faz parte do exercicio chamar o método de "pontoDeOnibus" 
+//mas acredito que uma melhor opção seria "calcularQtdPassageiros"
 let onibus = [[10, 0] , [3, 5] , [5 , 8]]
-pontoDeOnibus(onibus)
+//pontoDeOnibus(onibus)
 
 function pontoDeOnibus(onibus) {
     let qtdPassageiros = 0
@@ -34,4 +36,19 @@ function pontoDeOnibus(onibus) {
     onibus[onibus.length] = qtdPassageiros
 
     console.log(onibus)
+}
+
+//DESAFIO 3/////////////////////////////////////////
+let cartela = [21, 13, 2, 7, 5, 14, 7, 15, 9, 10]
+let perdeu
+VerificarSeGanhouJogo(cartela)
+
+function VerificarSeGanhouJogo(cartela) {
+    let bingo = [2, 7, 9, 14, 15]
+
+    for (let index = 0; index < bingo.length && !perdeu; index++) {
+        perdeu = cartela.every( numero => numero != bingo[index] )
+    }
+
+    console.log(perdeu ? "perdeu" : "ganhou")
 }
